@@ -1,7 +1,304 @@
-body {}
+@import url('https://fonts.googleapis.com/css?family=Abel|Glegoo');
+font-family: 'Abel', sans-serif;
+font-family: 'Glegoo', serif;
+
+body {
+   font-family: 'Glegoo', serif;
+
+    line-height: 1.5;
+}
+
+.header {
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Abel', sans-serif; 
+    background-color: #01579B;
+    color: white;
+    display: flex;
+    align-items: center;
+    }
+
+    .header h1 {
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-family: 'Glegoo', serif;
+        }
+
+    li {
+        margin: 20px;  
+    }
+
+        li a:link {
+            text-decoration: none; 
+        }
+
+        li a:visited {
+            text-decoration: none;
+            color: white;
+        }
 
 .hero {
     height:600px;
     background:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/110808/36601901962_dde134d539_k.jpg');
     background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+    .hero h2 {
+        font-family: 'Abel', sans-serif;
+        font-weight: bold;
+        font-size: 9vw;
+    }
+
+    .hero a {
+        background-color: #01579B;
+        width:180px;
+        height:40px;
+        padding: 12px;
+        margin-top: 48px;
+        text-align: center;
+        font-family: 'Glegoo', serif;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+        .hero a:link {
+            text-decoration: none;   
+    }
+
+        .hero a:visited {
+            text-decoration: none;
+            color: black;
+    }
+
+.about {
+    background-color: #e2e2e2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: 'Glegoo', serif;
+    text-align: center;
+}
+
+    .about-info .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about h2 {
+        font-family: 'Abel', sans-serif;
+        font-size: 2em;
+        margin-bottom: 24px;
+    }
+
+.what-we-do {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: 'Glegoo', serif;
+}
+     .what-we-do .row{
+        align-items: center;
+    }
+
+    .what-we-do h2 {
+        font-family: 'Abel', sans-serif;
+        font-size: 2em;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .what-we-do-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        color: #424242;
+    }
+
+        .what-we-do h3 {
+            font-family: 'Abel', sans-serif;
+            font-size: 1.5vw;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color:#01579B;
+    }
+
+.work {
+    background-color: #01579B;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: 'Glegoo', serif;
+    text-align: center;
+    }
+
+    .work h3 {
+            font-family: 'Abel', sans-serif;
+            font-size: 1.5vw;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color:white;
+    }
+
+    .work h2 {
+        font-family: 'Abel', sans-serif;
+        font-size: 2em;
+        margin-bottom: 24px;
+        text-align: center;
+        color: white;
+    }
+
+    @media screen and (max-width:768px;) {
+        /* CSS applied only on 768px and down */
+        .work .row {
+            flex-wrap: wrap;
+        }
+
+        .work-item {
+            flex-basis: 100%;
+        }
+    }
+
+.testimonials {
+    background-color: #e2e2e2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: 'Glegoo', serif;
+    text-align: center;
+    }
+
+    .testimonials h2 {
+        font-family: 'Abel', sans-serif;
+        font-size: 2em;
+        margin-bottom: 24px;
+        text-align: center;   
+        }
+
+    .testimonials-item {
+        display: flex;
+        padding: 10px;
+        }
+        
+
+    .testimonials .row{
+        flex-direction: column;
+        align-items: center;
+        }
+
+.footer {
+    background-color: #424242;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-family: 'Glegoo', serif;
+    text-align: center;
+}
+
+/* TABLET */
+    @media only screen and (max-width:768px) {
+        /* CSS applied only on 768px and down */
+
+       .header {
+        height: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        }
+
+
+            .header .row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+        
+
+            ul {
+            margin: 0;
+            padding-left: 12px;
+            padding-right: 12px;
+            }
+
+                .navigation .row {
+                    flex-direction: row;
+                     }
+              
+
+                .what-we-do-item {
+                    flex-wrap: wrap;
+                    padding: 12px;
+                    flex-basis: 50%;
+                    }
+
+        .work .row {
+            flex-wrap: wrap;
+        }
+
+            .work-item {
+                flex-basis: 100%;
+                margin-bottom: 48px;
+            }
+
+            .testimonials-item {
+                align-items: flex-start;
+            }
+    }
+
+/* MOBILE */
+     @media only screen and (max-width:540px) {
+        /* CSS applied only on 540px and down */
+
+            .navigation .row {
+                flex-basis: 33%;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                }
+          
+
+            li {
+               margin: 12px; 
+            }
+
+            .hero h2 {
+                display: flex;
+                flex-direction: column;
+                font-size: 12vw;
+            }
+
+        .work .row {
+            flex-wrap: wrap;
+        }
+
+            .work-item {
+                flex-basis: 100%;
+                margin-bottom: 48px;
+            }
+
+            .testimonials-item {
+                flex-direction: column;
+                flex-basis: 100%;
+            }
+
+            .testimonials-item-reversed {
+                
+                flex-direction: column-reverse;
+            }
+
+        .about .row{
+            flex-basis: 100%;
+        }
+
+        .what-we-do .row {
+            flex-basis: 100%;
+            flex-wrap: wrap;
+        }
+    }
